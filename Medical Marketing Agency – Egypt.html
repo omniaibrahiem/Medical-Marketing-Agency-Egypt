@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Medical Marketing Agency – Egypt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1f3a; --navy2:#122a4d; --teal:#0f8b8d; --teal-l:#e6f5f4;
+  --white:#ffffff; --gray:#f4f6f7; --gray2:#eef1f2; --text:#33424f; --muted:#6b7b86;
+  --radius:14px; --shadow:0 10px 30px rgba(11,31,58,.08);
+  --font-ar:'Tajawal',sans-serif; --font-en:'Inter',sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; scroll-padding-top:76px;}
+body{font-family:var(--font-ar); color:var(--text); background:var(--white); line-height:1.9; padding-top:env(safe-area-inset-top,0px);}
+h1,h2,h3,h4{font-family:var(--font-ar); color:var(--navy); font-weight:900;}
+.eng{font-family:var(--font-en); direction:ltr; display:inline-block;}
+img,svg{max-width:100%;}
+.container{max-width:1180px; margin:0 auto; padding:0 24px;}
+.section{padding:90px 0;}
+.section.alt{background:var(--gray);}
+.section-title{font-size:14px; letter-spacing:.5px; color:var(--teal); font-family:var(--font-en); font-weight:800; margin-bottom:10px;}
+.section-head{font-size:clamp(26px,3.5vw,38px); font-weight:900; color:var(--navy); margin-bottom:14px;}
+.section-lead{color:var(--muted); max-width:680px; margin-bottom:44px; font-size:17px;}
+.grid{display:grid; gap:22px;}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.card{background:var(--white); border:1px solid #e7ecee; border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); transition:transform .25s, box-shadow .25s;}
+.card:hover{transform:translateY(-4px); box-shadow:0 16px 36px rgba(11,31,58,.14);}
+.card h4{font-size:17px; margin-bottom:6px;}
+.card .eng{font-size:13px; color:var(--teal); font-weight:700; margin-bottom:6px;}
+.card p{color:var(--text); font-size:15px;}
+.card ul{margin-top:10px; padding-inline-start:18px; color:var(--text); font-size:14.5px;}
+.card ul li{margin-bottom:4px;}
+.badge{display:inline-block; background:var(--teal-l); color:var(--teal); font-family:var(--font-en); font-size:11.5px; font-weight:800; letter-spacing:.4px; padding:5px 12px; border-radius:20px; margin-bottom:12px;}
+/* nav */
+header{position:fixed; top:0; inset-inline:0; z-index:100; background:rgba(255,255,255,.92); backdrop-filter:blur(8px); border-bottom:1px solid #e7ecee; padding-top:env(safe-area-inset-top,0px);}
+.nav{display:flex; align-items:center; justify-content:space-between; height:72px; max-width:1180px; margin:0 auto; padding:0 24px;}
+.logo{font-family:var(--font-en); font-weight:900; color:var(--navy); font-size:18px;}
+.logo span{color:var(--teal);}
+.nav-links{display:flex; gap:26px; list-style:none;}
+.nav-links a{color:var(--navy); text-decoration:none; font-weight:700; font-size:14.5px;}
+.nav-links a:hover{color:var(--teal);}
+.nav-cta{background:var(--teal); color:#fff; padding:10px 20px; border-radius:8px; font-weight:800; text-decoration:none; font-size:14px;}
+.burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+.burger span{width:24px; height:2.5px; background:var(--navy);}
+/* hero */
+.hero{padding:150px 0 90px; background:linear-gradient(180deg,var(--white),var(--gray)); position:relative; overflow:hidden;}
+.hero::before{content:""; position:absolute; inset-inline-end:-120px; top:-80px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle,var(--teal-l) 0%, transparent 70%);}
+.hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center; position:relative; z-index:1;}
+.hero h1{font-family:var(--font-en); font-size:clamp(34px,5vw,54px); font-weight:900; line-height:1.15;}
+.hero h1 .eng2{color:var(--teal);}
+.hero .sub{font-family:var(--font-en); color:var(--teal); font-weight:700; font-size:19px; margin:14px 0 20px; direction:ltr; display:block;}
+.hero p{font-size:17px; color:var(--text); margin-bottom:30px; max-width:560px;}
+.hero-btns{display:flex; gap:14px;}
+.btn{padding:14px 28px; border-radius:9px; font-weight:800; text-decoration:none; font-size:15px; display:inline-block; border:2px solid transparent;}
+.btn-primary{background:var(--teal); color:#fff;}
+.btn-primary:hover{background:#0c7375;}
+.btn-outline{border-color:var(--navy); color:var(--navy);}
+.btn-outline:hover{background:var(--navy); color:#fff;}
+.hero-visual{background:var(--navy); border-radius:20px; padding:36px; color:#fff; box-shadow:var(--shadow);}
+.hero-visual .row{display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.12);}
+.hero-visual .row:last-child{border-bottom:none;}
+.hero-visual .dot{width:38px; height:38px; border-radius:10px; background:var(--teal); display:flex; align-items:center; justify-content:center; font-family:var(--font-en); font-weight:800; flex-shrink:0;}
+.hero-visual .label{font-family:var(--font-en); font-weight:800; font-size:14px;}
+.hero-visual .sub-l{font-size:13px; color:#b9c6d4; font-family:var(--font-ar);}
+/* swot */
+.swot{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.swot .card{border-top:5px solid var(--teal);}
+.swot .card.weak,.swot .card.threat{border-top-color:#c85a3a;}
+/* strategy timeline */
+.timeline{display:flex; flex-direction:column; gap:0;}
+.tl-step{display:flex; gap:22px; align-items:flex-start; padding-bottom:34px; position:relative;}
+.tl-step:not(:last-child)::before{content:""; position:absolute; inset-inline-start:23px; top:52px; bottom:0; width:2px; background:#dbe4e8;}
+.tl-num{width:48px; height:48px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-en); font-weight:900; font-size:15px; flex-shrink:0;}
+.tl-body h4{font-family:var(--font-en); color:var(--navy); font-size:18px;}
+.tl-body p{color:var(--text); font-size:15px; margin-top:4px;}
+/* positioning */
+.positioning{background:var(--navy); color:#fff; text-align:center; border-radius:20px; padding:60px 30px;}
+.positioning h3{color:#fff; font-size:clamp(20px,3vw,28px); max-width:800px; margin:0 auto 26px; line-height:1.7;}
+.flow{display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; font-family:var(--font-en); font-weight:800; color:var(--teal); font-size:15px;}
+.flow span.node{background:rgba(255,255,255,.08); padding:9px 16px; border-radius:8px; color:#fff;}
+/* prospect */
+.prospect-label{background:#c85a3a; color:#fff; font-size:11px; font-family:var(--font-en); font-weight:800; padding:4px 10px; border-radius:6px; display:inline-block; margin-bottom:10px;}
+/* leads flow */
+.ref-flow{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-weight:800; color:var(--navy); background:var(--gray2); padding:20px; border-radius:12px; font-size:15px;}
+.ref-flow .arrow{color:var(--teal);}
+/* cta */
+.cta-final{background:linear-gradient(135deg,var(--navy),var(--navy2)); color:#fff; border-radius:22px; padding:70px 40px; text-align:center;}
+.cta-final h2{color:#fff;}
+.cta-final p{color:#c7d3de; max-width:600px; margin:16px auto 30px; font-size:16.5px;}
+/* footer */
+footer{background:var(--navy); color:#c7d3de; padding:60px 0 30px;}
+footer h4{color:#fff; font-family:var(--font-en);}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:30px; margin-bottom:30px;}
+.foot-links{list-style:none; margin-top:14px;}
+.foot-links li{margin-bottom:9px;}
+.foot-links a{color:#c7d3de; text-decoration:none; font-size:14.5px;}
+.foot-links a:hover{color:var(--teal);}
+.socials{display:flex; gap:12px; margin-top:14px;}
+.socials a{width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; color:#fff; text-decoration:none; font-size:14px;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1); padding-top:22px; text-align:center; font-size:13.5px; color:#8ea1b2;}
+.note{background:var(--teal-l); border-radius:10px; padding:16px 20px; color:var(--navy); font-size:14.5px; margin-top:22px;}
+[data-animate]{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+[data-animate].in{opacity:1; transform:none;}
+@media(max-width:960px){
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+  .hero-inner{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .nav-links,.nav-cta{display:none;}
+  .burger{display:flex;}
+  .grid-2,.grid-3,.grid-4,.swot{grid-template-columns:1fr;}
+  .section{padding:60px 0;}
+  .nav-links.open{display:flex; position:absolute; top:72px; inset-inline:0; background:#fff; flex-direction:column; padding:20px 24px; gap:16px; border-bottom:1px solid #e7ecee;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">Medical<span>Marketing</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">الرئيسية</a></li>
+      <li><a href="#market">السوق</a></li>
+      <li><a href="#customers">العملاء</a></li>
+      <li><a href="#competitors">المنافسون</a></li>
+      <li><a href="#strategy">الاستراتيجية</a></li>
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#prospects">Prospects</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">تواصل معنا</a>
+    <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>Medical Marketing <span class="eng2">Agency</span></h1>
+      <span class="sub">Building &amp; Growing Healthcare Businesses</span>
+      <p>نحن وكالة تسويق متخصصة في بناء وتطوير الشركات الدوائية والصيدليات والمنشآت الطبية والصحية في مصر. نعتمد على أبحاث السوق والاستراتيجية وبناء العلامة التجارية والتسويق الرقمي وتطوير الأعمال لمساعدة الشركات الصحية على تحقيق نمو مستدام.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+        <a href="#contact" class="btn btn-outline">تواصل معنا</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="row"><div class="dot">Rx</div><div><div class="label">Medical</div><div class="sub-l">فهم عميق للقطاع الطبي والدوائي</div></div></div>
+      <div class="row"><div class="dot">Mx</div><div><div class="label">Marketing</div><div class="sub-l">استراتيجية وتسويق رقمي متخصص</div></div></div>
+      <div class="row"><div class="dot">Gx</div><div><div class="label">Growth</div><div class="sub-l">تطوير أعمال ونمو مستدام</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="market">
+  <div class="container">
+    <div class="section-title">Market</div>
+    <h2 class="section-head" data-animate>تعريف السوق</h2>
+    <div class="card" style="max-width:820px; margin-bottom:56px;" data-animate>
+      <p>Medical Marketing Agency هي وكالة تسويق متخصصة في بناء وتطوير الشركات الدوائية والصيدليات والمنشآت العاملة في المجال الطبي والصحي، من خلال أبحاث السوق، الاستراتيجية، بناء العلامة التجارية، التسويق الرقمي وتطوير الأعمال.</p>
+    </div>
+
+    <h3 class="section-head" style="font-size:24px;" data-animate>تقسيم السوق</h3>
+    <div class="grid grid-3" style="margin-bottom:56px;">
+      <div class="card" data-animate><div class="eng">Pharmaceutical Companies</div><h4>شركات الأدوية</h4><ul><li>استراتيجية العلامة التجارية</li><li>إطلاق المنتجات</li><li>تحديد مكانة المنتج</li><li>التسويق الرقمي</li></ul></div>
+      <div class="card" data-animate><div class="eng">Pharma Startups</div><h4>الشركات الدوائية الناشئة</h4><ul><li>بناء العلامة التجارية</li><li>دخول السوق</li><li>تحديد الجمهور المستهدف</li></ul></div>
+      <div class="card" data-animate><div class="eng">Pharmacies</div><h4>الصيدليات المستقلة</h4><ul><li>بناء الهوية</li><li>الحضور الرقمي</li><li>جذب العملاء</li></ul></div>
+      <div class="card" data-animate><div class="eng">Pharmacy Chains</div><h4>سلاسل الصيدليات</h4><ul><li>النمو</li><li>ولاء العملاء</li><li>التحول الرقمي</li></ul></div>
+      <div class="card" data-animate><div class="eng">Medical / Pharma Suppliers</div><h4>الموردون والموزعون</h4><ul><li>التسويق بين الشركات B2B</li><li>توليد العملاء المحتملين</li><li>تطوير الأعمال</li></ul></div>
+      <div class="card" data-animate><div class="eng">Healthcare Businesses</div><h4>مستشفيات ومراكز طبية</h4><ul><li>بناء العلامة التجارية</li><li>التواصل مع المرضى</li><li>التسويق الرقمي</li></ul></div>
+    </div>
+
+    <h3 class="section-head" style="font-size:24px;" data-animate>احتياجات السوق</h3>
+    <div class="grid grid-4">
+      <div class="card" data-animate><h4>فهم السوق</h4></div>
+      <div class="card" data-animate><h4>تحديد مكانة المنتج</h4></div>
+      <div class="card" data-animate><h4>إطلاق المنتجات</h4></div>
+      <div class="card" data-animate><h4>التحول الرقمي</h4></div>
+      <div class="card" data-animate><h4>التسويق للأطباء والمتخصصين</h4></div>
+      <div class="card" data-animate><h4>تطوير الأعمال</h4></div>
+      <div class="card" data-animate><h4>نتائج قابلة للقياس</h4></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="customers">
+  <div class="container">
+    <div class="section-title">Customers / Consumers</div>
+    <h2 class="section-head" data-animate>من نخدم</h2>
+    <div class="grid grid-3">
+      <div class="card" data-animate><div class="eng">B2B Customers</div><p>الشركات التي تشتري خدمات الوكالة:</p><ul><li>شركات الأدوية</li><li>الصيدليات</li><li>سلاسل الصيدليات</li><li>المستشفيات</li><li>المراكز الطبية</li><li>المعامل</li><li>الموردون الطبيون</li></ul></div>
+      <div class="card" data-animate><div class="eng">Decision Makers</div><p>يشاركون في قرار التعاقد:</p><ul><li>الرئيس التنفيذي</li><li>المؤسس</li><li>مدير التسويق</li><li>مدير العلامة التجارية</li><li>المدير التجاري</li><li>مدير تطوير الأعمال</li><li>المدير الطبي</li><li>مالك المنشأة</li></ul></div>
+      <div class="card" data-animate><div class="eng">B2C Consumers</div><p>المستهلك النهائي لخدمات أو منتجات عميل الوكالة:</p><ul><li>المرضى</li><li>عملاء الصيدليات</li><li>المستهلكون في المجال الصحي</li><li>مشترو المنتجات الدوائية والصحية</li></ul></div>
+    </div>
+    <div class="note" data-animate>المستهلك النهائي ليس عميلًا مباشرًا للوكالة، ولكنه الجمهور الذي تساعد الوكالة عملاءها على الوصول إليه.</div>
+  </div>
+</section>
+
+<section class="section" id="audience">
+  <div class="container">
+    <div class="section-title">Target Audience</div>
+    <h2 class="section-head" data-animate>Business Target</h2>
+    <div class="grid grid-2" style="margin-bottom:36px;">
+      <div class="card" data-animate><div class="eng">Primary Target</div><ul><li>شركات الأدوية</li><li>سلاسل الصيدليات</li><li>الصيدليات الكبرى</li><li>المجموعات الطبية</li><li>المستشفيات</li></ul></div>
+      <div class="card" data-animate><div class="eng">Secondary Target</div><ul><li>الشركات الدوائية الناشئة</li><li>المراكز الطبية</li><li>المعامل</li><li>الموردون والموزعون الطبيون</li></ul></div>
+    </div>
+    <div class="card" data-animate>
+      <div class="eng">Geographic Target</div>
+      <p style="margin-top:8px;">السوق المستهدف: مصر بالكامل، مع التركيز على مراكز النشاط الطبي والصحي الرئيسية، مع إمكانية التوسع مستقبلًا إلى الأسواق الإقليمية.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="competitors">
+  <div class="container">
+    <div class="section-title">Competitors</div>
+    <h2 class="section-head" data-animate>خريطة المنافسين</h2>
+    <div class="grid grid-3" style="margin-bottom:26px;">
+      <div class="card" data-animate><h4 class="eng">Dot IT</h4><p>خدمات رقمية متكاملة.</p></div>
+      <div class="card" data-animate><h4 class="eng">Search + Gather</h4><p>الأداء والبيانات.</p></div>
+      <div class="card" data-animate><h4 class="eng">BIG MOVE</h4><p>الفيديو وبناء العلامة التجارية.</p></div>
+      <div class="card" data-animate><h4 class="eng">MG Digital</h4><p>التسويق الرقمي المتكامل.</p></div>
+      <div class="card" data-animate><h4 class="eng">Hyper Media Labs</h4><p>التسويق عبر وسائل التواصل الاجتماعي.</p></div>
+      <div class="card" data-animate><h4 class="eng">Bright Brains IT</h4><p>التسويق والتكنولوجيا.</p></div>
+    </div>
+    <p style="color:var(--muted); max-width:760px;" data-animate>تختلف طبيعة المنافسة بين الوكالات العامة، ووكالات الأداء، والوكالات الإبداعية، والوكالات المتخصصة. وتركز استراتيجيتنا على بناء موقع متخصص في التسويق الطبي والصيدلاني وتطوير الأعمال.</p>
+  </div>
+</section>
+
+<section class="section" id="swot">
+  <div class="container">
+    <div class="section-title">SWOT Analysis</div>
+    <h2 class="section-head" data-animate>تحليل SWOT</h2>
+    <div class="swot">
+      <div class="card" data-animate><div class="eng">Strengths</div><ul><li>التخصص في المجال الطبي</li><li>فهم المصطلحات والمفاهيم الطبية</li><li>مراجعة المحتوى العلمي</li><li>فهم طبيعة الجمهور الصحي</li><li>الاعتماد على البيانات ومؤشرات الأداء</li></ul></div>
+      <div class="card weak" data-animate><div class="eng">Weaknesses</div><ul><li>شركة حديثة في السوق</li><li>سجل أعمال محدود في البداية</li><li>عدد محدود من الـ Case Studies عند الانطلاق</li></ul></div>
+      <div class="card" data-animate><div class="eng">Opportunities</div><ul><li>التحول الرقمي في القطاع الطبي</li><li>نمو المحتوى الطبي المرئي</li><li>زيادة الطلب على التسويق الرقمي الصحي</li><li>التسويق بين الشركات B2B</li><li>بناء شراكات استراتيجية</li></ul></div>
+      <div class="card threat" data-animate><div class="eng">Threats</div><ul><li>الوكالات التسويقية العامة</li><li>الوكالات المتخصصة</li><li>المستقلون Freelancers</li><li>المنافسة السعرية</li><li>ازدحام سوق التسويق الرقمي</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="strategy">
+  <div class="container">
+    <div class="section-title">Strategy</div>
+    <h2 class="section-head" data-animate>مسار العمل</h2>
+    <div class="timeline">
+      <div class="tl-step" data-animate><div class="tl-num">1</div><div class="tl-body"><h4>RESEARCH</h4><p>فهم السوق والعملاء والمنافسين والفرص.</p></div></div>
+      <div class="tl-step" data-animate><div class="tl-num">2</div><div class="tl-body"><h4>POSITION</h4><p>تحديد مكانة العلامة التجارية والمنتج.</p></div></div>
+      <div class="tl-step" data-animate><div class="tl-num">3</div><div class="tl-body"><h4>BUILD</h4><p>بناء الهوية والحضور الرقمي والأساس التسويقي.</p></div></div>
+      <div class="tl-step" data-animate><div class="tl-num">4</div><div class="tl-body"><h4>GROW</h4><p>تنفيذ التسويق وتوليد العملاء وتطوير الأعمال.</p></div></div>
+      <div class="tl-step" data-animate><div class="tl-num">5</div><div class="tl-body"><h4>MEASURE</h4><p>قياس النتائج وتحليل البيانات وتحسين الأداء.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-title">Services</div>
+    <h2 class="section-head" data-animate>خدماتنا</h2>
+    <div class="grid grid-4">
+      <div class="card" data-animate><div class="eng">Strategy</div><ul><li>أبحاث السوق</li><li>تحليل المنافسين</li><li>استراتيجية العلامة التجارية</li><li>تحديد مكانة المنتجات</li><li>استراتيجية النمو</li></ul></div>
+      <div class="card" data-animate><div class="eng">Marketing</div><ul><li>التسويق الرقمي</li><li>إدارة وسائل التواصل الاجتماعي</li><li>صناعة المحتوى</li><li>الحملات الإعلانية</li><li>إطلاق المنتجات</li></ul></div>
+      <div class="card" data-animate><div class="eng">Medical Marketing</div><ul><li>التسويق للأطباء والمتخصصين</li><li>تسويق الصيدليات</li><li>التوعية الصحية</li><li>التسويق بين الشركات B2B</li><li>الحملات الطبية</li></ul></div>
+      <div class="card" data-animate><div class="eng">Business Development</div><ul><li>توليد العملاء المحتملين</li><li>التوسع في الأسواق</li><li>بناء الشراكات</li><li>تطوير الأعمال</li><li>متابعة مؤشرات الأداء</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="partners">
+  <div class="container">
+    <div class="section-title">Partners</div>
+    <h2 class="section-head" data-animate>شركاء محتملون</h2>
+    <div class="grid grid-3">
+      <div class="card" data-animate><h4 class="eng">CRM &amp; Software Companies</h4><p>شركات البرمجيات وأنظمة إدارة علاقات العملاء.</p></div>
+      <div class="card" data-animate><h4 class="eng">Healthcare PR</h4><p>وكالات العلاقات العامة والإعلام المتخصصة في القطاع الصحي.</p></div>
+      <div class="card" data-animate><h4 class="eng">Pharma Consultants</h4><p>استشاريو قطاع الأدوية.</p></div>
+      <div class="card" data-animate><h4 class="eng">Medical Professionals</h4><p>الأطباء والصيادلة والمتخصصون في المجال الطبي.</p></div>
+      <div class="card" data-animate><h4 class="eng">Medical Content Specialists</h4><p>المتخصصون في صناعة ومراجعة المحتوى الطبي.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prospects">
+  <div class="container">
+    <div class="section-title">Prospects</div>
+    <h2 class="section-head" data-animate>فرص مستهدفة محتملة</h2>
+    <p class="section-lead" data-animate>الجهات التالية مؤسسات مستهدفة محتملة (Prospects) وليست عملاء حاليين للوكالة.</p>
+    <div class="grid grid-3">
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">United Company of Pharmacists – UCP</h4><p>شركة تعمل في مجال توزيع الأدوية والرعاية الصحية.</p><ul><li>التسويق بين الشركات</li><li>التواصل مع الصيدليات</li><li>الحضور الرقمي</li><li>تجربة العملاء</li><li>تطوير الأعمال</li><li>التحول الرقمي</li></ul></div>
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">Cleopatra Medical Group</h4><p>مجموعة طبية ومستشفيات. احتياجات محتملة تحتاج إلى التحقق من خلال البحث:</p><ul><li>التسويق للخدمات الطبية المتخصصة</li><li>المحتوى الطبي</li><li>تحليل سلوك المرضى</li><li>الحضور الرقمي</li></ul></div>
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">Dar Al Fouad / Saudi German</h4><p>مستشفيات ومجموعات صحية.</p><ul><li>التسويق للخدمات الطبية</li><li>الظهور الرقمي</li><li>جذب المرضى</li><li>التسويق للمرضى الدوليين</li></ul></div>
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">OneHealth</h4><p>مجموعة عيادات متعددة التخصصات.</p><ul><li>الحجوزات الرقمية</li><li>Performance Marketing</li><li>تحسين تجربة العميل</li></ul></div>
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">Global Care Hospital</h4><p>مستشفى تخصصي.</p><ul><li>التسويق للخدمات الطبية</li><li>المحتوى الطبي</li><li>الفيديو الطبي</li><li>التسويق الرقمي</li></ul></div>
+      <div class="card" data-animate><span class="prospect-label">Target Prospect</span><h4 class="eng">Dental &amp; Aesthetic Chains</h4><p>سلاسل ومراكز الأسنان والتجميل.</p><ul><li>Meta Ads</li><li>Google Ads</li><li>Branding</li><li>جذب العملاء للخدمات عالية القيمة</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="leads">
+  <div class="container">
+    <div class="section-title">Lead Generation</div>
+    <h2 class="section-head" data-animate>مصادر العملاء المحتملين</h2>
+    <div class="grid grid-3" style="margin-bottom:24px;">
+      <div class="card" data-animate><h4 class="eng">Medical Databases &amp; Directories</h4><p>استخدام الأدلة والمنصات الطبية في البحث عن الشركات والمنشآت والأطباء، ثم إجراء Digital Audit قبل التواصل.</p></div>
+      <div class="card" data-animate><h4 class="eng">Medical Conferences</h4><p>المشاركة في المؤتمرات والمعارض الطبية والصحية للتواصل مع أصحاب القرار.</p></div>
+      <div class="card" data-animate><h4 class="eng">LinkedIn B2B</h4><ul><li>CEOs</li><li>Marketing Managers</li><li>Commercial Managers</li><li>Business Development Managers</li><li>Medical Directors</li></ul></div>
+    </div>
+    <div class="ref-flow" data-animate><span class="eng">Referrals:</span><span>الطبيب</span><span class="arrow">←</span><span>المستشفى</span><span class="arrow">←</span><span>الصيدلية</span><span class="arrow">←</span><span>شركة الأدوية</span></div>
+    <div class="grid grid-4" style="margin-top:24px;">
+      <div class="card" data-animate><h4 class="eng">Direct Outreach</h4><ul><li>Email</li><li>LinkedIn</li><li>WhatsApp</li><li>Business Calls</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why-us">
+  <div class="container">
+    <div class="section-title">Why Us</div>
+    <h2 class="section-head" data-animate>لماذا نحن</h2>
+    <div class="grid grid-3">
+      <div class="card" data-animate><h4 class="eng">Medical Expertise</h4><p>فهم طبيعة القطاع والمصطلحات والجمهور.</p></div>
+      <div class="card" data-animate><h4 class="eng">Business Understanding</h4><p>ربط التسويق بأهداف الشركة ونمو الأعمال.</p></div>
+      <div class="card" data-animate><h4 class="eng">Specialized Strategy</h4><p>بناء الاستراتيجية على أساس البحث والتحليل.</p></div>
+      <div class="card" data-animate><h4 class="eng">Data-Driven Marketing</h4><p>استخدام البيانات ومؤشرات الأداء في اتخاذ القرارات.</p></div>
+      <div class="card" data-animate><h4 class="eng">End-to-End Growth</h4><p>من البحث والاستراتيجية إلى التسويق والنمو والقياس.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="positioning">
+  <div class="container">
+    <div class="section-title">Positioning</div>
+    <div class="positioning" data-animate>
+      <h3>نحن لا نقدم التسويق الطبي فقط، بل نبني استراتيجيات تساعد الشركات الصحية والدوائية على النمو.</h3>
+      <div class="flow">
+        <span class="node">Research</span><span>→</span><span class="node">Strategy</span><span>→</span><span class="node">Marketing</span><span>→</span><span class="node">Growth</span><span>→</span><span class="node">Measurement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-final" data-animate>
+      <h2>Let's Grow Together</h2>
+      <p>هل تبحث عن شريك يفهم طبيعة السوق الطبي والصيدلاني؟ دعنا نبدأ بفهم السوق، تحديد الفرص، وبناء استراتيجية تسويقية تناسب أهداف شركتك.</p>
+      <div class="hero-btns" style="justify-content:center;">
+        <a href="#contact" class="btn btn-primary">ابدأ معنا</a>
+        <a href="#contact" class="btn btn-outline" style="border-color:#fff; color:#fff;">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Medical Marketing Agency – Egypt</h4>
+        <p style="margin-top:10px; font-size:14.5px;">وكالة تسويق متخصصة في بناء وتطوير الشركات الدوائية والصحية في مصر.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="eng">Explore</h4>
+        <ul class="foot-links">
+          <li><a href="#hero">الرئيسية</a></li>
+          <li><a href="#market">السوق</a></li>
+          <li><a href="#customers">العملاء</a></li>
+          <li><a href="#competitors">المنافسون</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="eng">More</h4>
+        <ul class="foot-links">
+          <li><a href="#strategy">الاستراتيجية</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#prospects">Prospects</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Medical Marketing Agency – Egypt. جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+}));
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.12});
+document.querySelectorAll('[data-animate]').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
